@@ -14,6 +14,7 @@ public interface PersonRestMapper {
 
   @Mapping(target = "id", ignore = true)
   @Mapping(target = "version", ignore = true)
+  @Mapping(target = "documentType.version", ignore = true)
   Person toDomain(PersonRequestDto personRequestDto);
 
   PersonResponseDto toResponse(Person person);
